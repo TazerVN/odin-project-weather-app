@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    list-style: none;
+    font-size: 30px;
+    font-family: "Lato";
+    color: rgb(58, 58, 58);
+    user-select: none;
+
+}
+
+.element::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+body{
+    background-image: url("./img/background.jpg");
+    background-attachment: fixed;
+    background-repeat:round;
+    background-color: aliceblue;
+    background-blend-mode: multiply;
+    padding: 32px;
+}
+
+.main{
+    display: grid;
+    justify-content: center;
+    background-color: #f5fafa;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    border-radius: 16px;
+    box-shadow: 0 10px 10px -5px #9190905e;
+    padding: 32px;
+    margin: auto;
+    width: 90vw;
+}
+
+
+div.sidebar{
+    grid-column: 1 / 2;
+    grid-row: 0/ 1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #4c596346;
+}
+
+div.name{
+    font-weight: 700;
+}
+
+input#search{
+    width: auto;
+    height: 40px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-style: none;
+    outline: none;
+}
+
+input#search:hover{
+    background-color: rgb(124, 140, 145);
+}
+
+input#search:focus{
+    border: none;
+    font-size: 30px;
+
+}
+
+div.sidebar>ul{
+    padding: 16px;
+    
+}
+
+ul.menu>li{
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+    border-radius: 16px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+ul.menu>li:hover{
+    background-color: rgba(124, 151, 161, 0.055);
+    cursor: pointer;
+}
+
+ul.menu{
+    margin-bottom: 32px;
+}
+
+ul.menu>li>div{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 8px;
+}
+
+div.content{
+    grid-column: 2/3;
+    padding: 32px;
+}
+
+div.title{
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.icon{
+    width: 1rem;
+    height: 1rem;
+}
+
+a{
+    font-size: small;
+}
+
+
+ul.projectlist>li{
+    list-style-type: circle;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+ul.projectlist>li.project>div{
+    font-size: 25px;
+    padding: 4px;
+    font-weight: 500;
+    
+    
+}
+
+li.project>ul>li{
+    list-style-type: "#";
+    font-size: 20px;
+    font-weight: 300;
+    width: 200px;
+    height: 20px;
+    overflow:hidden;
+}
+
+li.project:hover{
+    background-color: rgba(224, 240, 247, 0.185);
+    cursor: pointer;
+
+}
+
+div.content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 70px min-content;
+    grid-auto-rows: min-content;
+    gap: 16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+
+}
+
+div.card{
+    background-color: rgba(159, 193, 199, 0.185);
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 32px;
+    border-radius: 16px;
+    flex-flow: column wrap;
+    box-shadow: 0px 10px 10px -10px rgba(64, 129, 141, 0.473);
+}
+
+
+
+
+div.card>div.projecttitle{
+    font-weight: 700;
+    display: flex;
+    justify-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 16px;
+    width: 55vw;
+    font-size: 1rem;
+}
+
+div.projecttitle>div{
+    display: flex;
+    gap: 16px;
+}
+
+
+div.card>div.projecttitle:hover{
+    background-color: rgba(124, 151, 161, 0.055)
+}
+
+
+div.projectdescription{
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 16px;
+}
+
+
+button.card{
+    background-color: rgba(236, 246, 250, 0.699);
+    border: none;
+    border-radius: 16px;
+    width: 100px;
+    padding: 16px;
+    box-shadow: 0px 10px 15px -10px rgba(64, 129, 141, 0.212);
+}
+
+span#remove,
+span#edit{
+    width: 50px;
+    height: auto;
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 0;
+    align-self: flex-end;
+}
+
+span#remove:hover,
+span#edit:hover{
+    cursor: pointer;
+    background-color: #b9b9b983;
+}
+
+
+button.card:hover{
+    background-color: rgba(156, 159, 160, 0.699);
+    cursor: pointer;
+}
+
+div.tasks{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: start;
+    padding: 16px;
+    
+}
+
+div.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 16px;
+    width: 55vw;
+    margin-bottom: 16px;
+    
+}
+
+div.task>label.text{
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: flex-start;
+    margin: auto;
+    flex: 1;
+    width: 400px;
+    font-size: 0.75rem;
+}
+
+label.text>*{
+    display: flex;
+    font-size: 0.5rem;
+    margin: 0;
+}
+
+div.task>.smallcard{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-self: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: auto;
+    flex: auto;
+    width: 600px;
+    gap: 16px;
+}
+
+
+
+div.smallcard>div{
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.smallcard>div>*{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+div.task:hover{
+    background-color: rgba(124, 151, 161, 0.055);
+    box-shadow: 0px 10px 10px -10px rgba(55, 85, 90, 0.199);
+}
+
+div.task>span{
+    font-size: 25px;
+    vertical-align: middle;
+    display: inline-block;
+    gap: 16px;
+}
+
+
+
+input[type="checkbox"]{
+    transform: scale(2.5);
+    position: static;
+    display: inline;
+    margin-right: 16px;
+    margin-bottom: 32px;
+    
+    
+}
+
+div.content>div.title{
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+form>*{
+    justify-content: start;
+    align-self: start;
+    justify-self: start;
+    align-items: flex-start;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    border-radius: 16px;
+    align-self: flex-start;
+    justify-self: flex-start;
+    background-color: rgb(207, 239, 245);
+    flex-wrap: wrap;
+    box-shadow: 0px 10px 20px -10px rgba(64, 129, 141, 0.37);
+}
+
+form>label>input,
+form>label>select{
+    width: 20vw;
+    height: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 60px;
+
+}
+
+
+form>label>input:focus{
+    border: none;
+    border-style: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    align-self: flex-start;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+form>label{
+    width: 40vw;
+    padding: 16px;
+    gap: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+button.save{
+    padding: 16px;
+    border-radius: 16px;
+    justify-self: center;
+    align-self: center;
+    flex: 0 1;
+    background-color: rgba(236, 246, 250, 0.699);
+    border: none;
+}
+
+button.save:hover{
+    background-color: rgba(162, 172, 175, 0.699);
+    cursor: pointer;
+}
+
+div.hide{
+    display:none;
+}
+
+
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .task input[type=checkbox] {
+      --active: #275EFE;
+      --active-inner: #fff;
+      --focus: 2px rgba(39, 94, 254, .3);
+      --border: #BBC1E1;
+      --border-hover: #275EFE;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 15px;
+      outline: none;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      margin: 10px 32px;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+    .task input[type=checkbox]:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+    .task input[type=checkbox]:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    .task input[type=checkbox]:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+    .task input[type=checkbox]:disabled:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    .task input[type=checkbox]:disabled + label {
+      cursor: not-allowed;
+    }
+    .task input[type=checkbox]:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover);
+    }
+    .task input[type=checkbox]:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    .task input[type=checkbox]:not(.switch) {
+      width: 15px;
+    }
+    .task input[type=checkbox]:not(.switch):after {
+      opacity: var(--o, 0);
+    }
+    .task input[type=checkbox]:not(.switch):checked {
+      --o: 1;
+    }
+    .task input[type=checkbox] + label {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+
+    .task input[type=checkbox]:not(.switch) {
+      border-radius: 7px;
+    }
+    .task input[type=checkbox]:not(.switch):after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 4px;
+      top: 0px;
+      transform: rotate(var(--r, 20deg));
+    }
+    .task input[type=checkbox]:not(.switch):checked {
+      --r: 43deg;
+    }
+}
+
+.task * {
+    box-sizing: inherit;
+    margin-left: 16px;
+}
+.task *:before,
+.task *:after {
+    box-sizing: inherit;
+}
+
+
