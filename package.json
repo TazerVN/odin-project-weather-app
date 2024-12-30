@@ -9,9 +9,9 @@
     "webpack-dev-server": "^5.2.0",
     "webpack-merge": "^6.0.1"
   },
-  "name": "to-do-list",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "a weather app ",
   "main": "webpack.config.js",
   "dependencies": {
     "acorn": "^8.14.0",
@@ -107,6 +107,10 @@
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "TazerVN",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "odin-project-weather-app"
+  }
 }
