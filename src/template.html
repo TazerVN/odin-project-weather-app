@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">Weather App</div>
+      <form action="">
+        <label for="text">Search:</label>
+        <input type="text" id="text" required minlength="2" />
+        <button type="button" class="submit" id="submit">Submit</button>
+      </form>
+    </header>
+    <main>
+      <div class="current">
+        Search an area to see the result
+      </div>
+      <div class="content">
+        <div class="today"></div>
+        <div class="thisweek"></div>
+      </div>
+    </main>
+  </body>
 </html>
